@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="calculate-double.cpp">
+    <ClCompile Include="chapter10-3.3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
