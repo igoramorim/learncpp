@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ball-tower-height.cpp" />
+    <ClCompile Include="chapter4-2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="constants.h" />
