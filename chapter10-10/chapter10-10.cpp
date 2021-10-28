@@ -47,6 +47,12 @@ int main()
     std::cout << &c; // print some weird stuff. Because c is char, std::cout tries to print the memory address as a string
 
     std::cout << "\n\n";
+
+    int value2{ 5 };
+    int* const ptr2{ &value2 };
+    *ptr2 = 6;
+
+    std::cout << "\n\n";
     return 0;
 }
 
