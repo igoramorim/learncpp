@@ -4,13 +4,10 @@
 #include <iomanip>
 #include <bitset>
 
-#include "add.h"
-#include "input.h"
-#include "constants.h"
-
 int main()
 {
-    /*std::cout << "Hello World!\n";
+    std::cout << "Hello World!\n";
+
     int x{ 14 };
     std::cout << x << "\n" << "teste" << "\n";
 
@@ -20,24 +17,19 @@ int main()
     std::cout << "You entered " << y << "\n";
 
     int z{ };
-    std::cout << "z: " << z;*/
+    std::cout << "z: " << z << "\n\n";
 
-    /*int x{ getInteger() };
-    int y{ getInteger() };
-
-    std::cout << "The sum is: " << add(x, y) << "\n";*/
-
-    std::cout << "w\tt\tf\v!\n";
-
-    std::cout << "\x6F\n\n";
-
-    /*std::string name{};
+    std::string name{};
     std::cout << "Enter your name: ";
 
     // read a full line of text. std::ws is a input manipulator that tells std::cin to ingnore leading whitespaces
     // so it can read the input as a string
     std::getline(std::cin >> std::ws, name);
-    std::cout << "Your name is " << name << " and it has " << name.length() << " characters\n";*/
+    std::cout << "Your name is " << name << " and it has " << name.length() << " characters\n";
+
+    std::cout << "w\tt\tf\v!\n";
+
+    std::cout << "\x6F\n\n";
 
     int oc{ 012 }; // prefix 0 for octal. cout prints number in decimal, so 012 in octal is 10 in decimal
     std::cout << "octal value printed decimal:\t" << oc << '\n';
@@ -52,9 +44,6 @@ int main()
     std::bitset<8> bin1{ 0b1100'0101 }; // binary literal for binary 1100 0101
     std::cout << "binary value printed:\t\t" << bin1 << '\n';
     std::cout << "binary value printed:\t\t" << std::bitset<4>{ 0b1010 } << "\n\n"; // we can also print from std::bitset directly
-
-    std::cout << "const gravity value from a header file: " << constants::gravity << '\n';
-    std::cout << "const PI value from a header file: " << constants::pi << '\n';
 
     return 0;
 }

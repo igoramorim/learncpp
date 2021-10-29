@@ -14,7 +14,7 @@ double calculateHeight(double towerHeight, int seconds)
 {
     double distFallen{ (constants::gravity * (seconds * seconds)) / 2 };
     return { towerHeight - distFallen };
-    
+
 }
 
 void calculateAndPrint(double towerHeight, int seconds)

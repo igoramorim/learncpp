@@ -3,7 +3,7 @@
 
 double calculateHeight(double initialHeight, int seconds)
 {
-    double distanceFallen{ myConstants::gravity * seconds * seconds / 2 };
+    double distanceFallen{ constants::gravity * seconds * seconds / 2 };
     double heightNow{ initialHeight - distanceFallen };
 
     // Check whether we've gone under the ground
