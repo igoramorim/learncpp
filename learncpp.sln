@@ -27,10 +27,14 @@ Global
 		Debug|x86 = Debug|x86
 		enum_class|x64 = enum_class|x64
 		enum_class|x86 = enum_class|x86
+		for_each|x64 = for_each|x64
+		for_each|x86 = for_each|x86
 		header_files|x64 = header_files|x64
 		header_files|x86 = header_files|x86
 		max_students_class|x64 = max_students_class|x64
 		max_students_class|x86 = max_students_class|x86
+		member_selection|x64 = member_selection|x64
+		member_selection|x86 = member_selection|x86
 		memory_allocation|x64 = memory_allocation|x64
 		memory_allocation|x86 = memory_allocation|x86
 		mult_array|x64 = mult_array|x64
@@ -103,6 +107,10 @@ Global
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.enum_class|x64.Build.0 = enum_class|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.enum_class|x86.ActiveCfg = enum_class|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.enum_class|x86.Build.0 = enum_class|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.for_each|x64.ActiveCfg = for_each|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.for_each|x64.Build.0 = for_each|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.for_each|x86.ActiveCfg = for_each|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.for_each|x86.Build.0 = for_each|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.header_files|x64.ActiveCfg = header_files|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.header_files|x64.Build.0 = header_files|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.header_files|x86.ActiveCfg = header_files|Win32
@@ -111,6 +119,10 @@ Global
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.max_students_class|x64.Build.0 = max_students_class|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.max_students_class|x86.ActiveCfg = max_students_class|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.max_students_class|x86.Build.0 = max_students_class|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.member_selection|x64.ActiveCfg = member_selection|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.member_selection|x64.Build.0 = member_selection|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.member_selection|x86.ActiveCfg = member_selection|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.member_selection|x86.Build.0 = member_selection|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.memory_allocation|x64.ActiveCfg = memory_allocation|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.memory_allocation|x64.Build.0 = memory_allocation|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.memory_allocation|x86.ActiveCfg = memory_allocation|Win32
