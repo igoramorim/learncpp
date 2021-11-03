@@ -102,6 +102,15 @@
     <ClCompile Include="main_for_each.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main_std_array.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main_std_vector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main_iterators.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add.h">
