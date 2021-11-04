@@ -59,6 +59,8 @@ Global
 		sort_array|x86 = sort_array|x86
 		static_local_variable|x64 = static_local_variable|x64
 		static_local_variable|x86 = static_local_variable|x86
+		std_algorithm|x64 = std_algorithm|x64
+		std_algorithm|x86 = std_algorithm|x86
 		std_array|x64 = std_array|x64
 		std_array|x86 = std_array|x86
 		std_vector|x64 = std_vector|x64
@@ -177,6 +179,10 @@ Global
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.static_local_variable|x64.Build.0 = static_local_variable|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.static_local_variable|x86.ActiveCfg = static_local_variable|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.static_local_variable|x86.Build.0 = static_local_variable|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.std_algorithm|x64.ActiveCfg = std_algorithm|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.std_algorithm|x64.Build.0 = std_algorithm|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.std_algorithm|x86.ActiveCfg = std_algorithm|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.std_algorithm|x86.Build.0 = std_algorithm|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.std_array|x64.ActiveCfg = std_array|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.std_array|x64.Build.0 = std_array|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.std_array|x86.ActiveCfg = std_array|Win32
