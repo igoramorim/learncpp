@@ -1,5 +1,15 @@
 #include <iostream>
 
+// print a c-style string character by character until hit the null terminator
+void printCStyleString(const char* str)
+{
+    while (*str != '\0')
+    {
+        std::cout << *str;
+        ++str;
+    }
+}
+
 int main()
 {
     short value{ 7 }; // short is 2 bytes
@@ -53,6 +63,10 @@ int main()
     *ptr2 = 6;
 
     std::cout << "\n\n";
+
+    printCStyleString("igor");
+
+
     return 0;
 }
 

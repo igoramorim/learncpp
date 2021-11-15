@@ -17,6 +17,8 @@ Global
 		ascii_char|x86 = ascii_char|x86
 		bit_manipulation|x64 = bit_manipulation|x64
 		bit_manipulation|x86 = bit_manipulation|x86
+		blackjack|x64 = blackjack|x64
+		blackjack|x86 = blackjack|x86
 		calculate_ball_falling_while|x64 = calculate_ball_falling_while|x64
 		calculate_ball_falling_while|x86 = calculate_ball_falling_while|x86
 		calculate_ball_falling|x64 = calculate_ball_falling|x64
@@ -99,6 +101,10 @@ Global
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.bit_manipulation|x64.Build.0 = bit_manipulation|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.bit_manipulation|x86.ActiveCfg = bit_manipulation|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.bit_manipulation|x86.Build.0 = bit_manipulation|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.blackjack|x64.ActiveCfg = blackjack|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.blackjack|x64.Build.0 = blackjack|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.blackjack|x86.ActiveCfg = blackjack|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.blackjack|x86.Build.0 = blackjack|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.calculate_ball_falling_while|x64.ActiveCfg = calculate_ball_falling_while|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.calculate_ball_falling_while|x64.Build.0 = calculate_ball_falling_while|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.calculate_ball_falling_while|x86.ActiveCfg = calculate_ball_falling_while|Win32
