@@ -31,6 +31,8 @@ Global
 		enum_class|x86 = enum_class|x86
 		for_each|x64 = for_each|x64
 		for_each|x86 = for_each|x86
+		function_pointers|x64 = function_pointers|x64
+		function_pointers|x86 = function_pointers|x86
 		functions|x64 = functions|x64
 		functions|x86 = functions|x86
 		header_files|x64 = header_files|x64
@@ -131,6 +133,10 @@ Global
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.for_each|x64.Build.0 = for_each|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.for_each|x86.ActiveCfg = for_each|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.for_each|x86.Build.0 = for_each|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.function_pointers|x64.ActiveCfg = function_pointers|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.function_pointers|x64.Build.0 = function_pointers|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.function_pointers|x86.ActiveCfg = function_pointers|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.function_pointers|x86.Build.0 = function_pointers|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.functions|x64.ActiveCfg = functions|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.functions|x64.Build.0 = functions|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.functions|x86.ActiveCfg = functions|Win32
