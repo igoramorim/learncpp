@@ -57,6 +57,8 @@ Global
 		quiz_enum_array|x86 = quiz_enum_array|x86
 		quiz_vector_struct|x64 = quiz_vector_struct|x64
 		quiz_vector_struct|x86 = quiz_vector_struct|x86
+		recursion|x64 = recursion|x64
+		recursion|x86 = recursion|x86
 		reference_variable|x64 = reference_variable|x64
 		reference_variable|x86 = reference_variable|x86
 		Release|x64 = Release|x64
@@ -185,6 +187,10 @@ Global
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.quiz_vector_struct|x64.Build.0 = quiz_vector_struct|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.quiz_vector_struct|x86.ActiveCfg = quiz_vector_struct|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.quiz_vector_struct|x86.Build.0 = quiz_vector_struct|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.recursion|x64.ActiveCfg = recursion|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.recursion|x64.Build.0 = recursion|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.recursion|x86.ActiveCfg = recursion|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.recursion|x86.Build.0 = recursion|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.reference_variable|x64.ActiveCfg = reference_variable|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.reference_variable|x64.Build.0 = reference_variable|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.reference_variable|x86.ActiveCfg = reference_variable|Win32
