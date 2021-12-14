@@ -39,6 +39,8 @@ Global
 		header_files|x86 = header_files|x86
 		iterators|x64 = iterators|x64
 		iterators|x86 = iterators|x86
+		lambda|x64 = lambda|x64
+		lambda|x86 = lambda|x86
 		max_students_class|x64 = max_students_class|x64
 		max_students_class|x86 = max_students_class|x86
 		member_selection|x64 = member_selection|x64
@@ -151,6 +153,10 @@ Global
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.iterators|x64.Build.0 = iterators|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.iterators|x86.ActiveCfg = iterators|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.iterators|x86.Build.0 = iterators|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.lambda|x64.ActiveCfg = lambda|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.lambda|x64.Build.0 = lambda|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.lambda|x86.ActiveCfg = lambda|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.lambda|x86.Build.0 = lambda|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.max_students_class|x64.ActiveCfg = max_students_class|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.max_students_class|x64.Build.0 = max_students_class|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.max_students_class|x86.ActiveCfg = max_students_class|Win32
