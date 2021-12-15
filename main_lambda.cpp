@@ -3,6 +3,7 @@
 #include <array>
 #include <string_view>
 #include <functional>
+#include <string>
 
 // We dont know that fn will be. std::function works with regular and lambda functions
 void repeat(int repetitions, const std::function<void(int)>& fn)
@@ -119,6 +120,59 @@ int main()
 	for (int i : numbers2)
 	{
 		std::cout << i << ' ';
+	}
+
+
+	/*
+	* Exercise 1
+	* Use std::max_element to find the student with the most points
+	*/
+	struct Student
+	{
+		std::string name{};
+		int points{};
+	};
+
+	std::array<Student, 8> students {
+	  { { "Albert", 3 },
+		{ "Ben", 5 },
+		{ "Christine", 2 },
+		{ "Dan", 8 }, // Dan has the most points (8).
+		{ "Enchilada", 4 },
+		{ "Francis", 1 },
+		{ "Greg", 3 },
+		{ "Hagrid", 5 } }
+	};
+
+	const auto bestStudent{ std::max_element(students.begin(), students.end(),
+		[](const Student& s1, const Student& s2) { return (s1.points < s2.points); }) };
+
+	std::cout << "\nBest student is: " << bestStudent->name << " with " << bestStudent->points << " points\n";
+
+
+	/*
+	* Exercise 2
+	* Use std::sort to sort the seasons by ascending average temperature
+	*/
+	struct Season
+	{
+		std::string_view name{};
+		double averageTemperature{};
+	};
+
+	std::array<Season, 4> seasons{
+	{ { "Spring", 285.0 },
+	  { "Summer", 296.0 },
+	  { "Fall", 288.0 },
+	  { "Winter", 263.0 } }
+	};
+
+	std::sort(seasons.begin(), seasons.end(),
+		[](const Season& s1, const Season& s2) { return (s1.averageTemperature < s2.averageTemperature); });
+
+	for (const auto& season : seasons)
+	{
+		std::cout << season.name << "\t: " << season.averageTemperature << '\n';
 	}
 
 	return 0;
