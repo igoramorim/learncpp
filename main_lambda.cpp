@@ -5,6 +5,15 @@
 #include <functional>
 #include <string>
 
+// returns a lambda
+auto makeDog(const std::string& name)
+{
+	// capture name by reference and return the lambda
+	return [&]() {
+		std::cout << "\n I am a dog, my name is " << name << '\n'; // undefined behavior
+	};
+}
+
 // We dont know that fn will be. std::function works with regular and lambda functions
 void repeat(int repetitions, const std::function<void(int)>& fn)
 {
@@ -62,6 +71,7 @@ int main()
 	* Because all string types allow access to each character by [] operator we can pass std::string or a C-style string
 	* that the lambda with 'auto' parameters will work just fine
 	*/
+	std::cout << '\n';
 	constexpr std::array months{ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
 
 	constexpr std::array<const char*, 12> monthsC{ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
@@ -80,6 +90,7 @@ int main()
 	* Generic lambda and static variables
 	* A static variable will be created for each type of the lambda
 	*/
+	std::cout << '\n';
 	auto print{
 		[](auto value) {
 			static int callCount{ 0 };
@@ -97,6 +108,7 @@ int main()
 	/*
 	* Return type deduction
 	*/
+	std::cout << '\n';
 	auto divide{ [](int x, int y, bool bInteger) -> double { // explicitly specifying the return type
 		if (bInteger)
 			return x / y; // will do an inplicit conversion to double
@@ -112,6 +124,7 @@ int main()
 	* Standard library functions objects
 	* The Standard library (<functional> header) comes with many basics operations
 	*/
+	std::cout << '\n';
 	std::array<int, 10> numbers2{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
 	std::sort(numbers2.begin(), numbers2.end(), std::greater{}); // using standard library
@@ -127,6 +140,7 @@ int main()
 	* Exercise 1
 	* Use std::max_element to find the student with the most points
 	*/
+	std::cout << '\n';
 	struct Student
 	{
 		std::string name{};
@@ -154,6 +168,7 @@ int main()
 	* Exercise 2
 	* Use std::sort to sort the seasons by ascending average temperature
 	*/
+	std::cout << '\n';
 	struct Season
 	{
 		std::string_view name{};
@@ -174,6 +189,112 @@ int main()
 	{
 		std::cout << season.name << "\t: " << season.averageTemperature << '\n';
 	}
+
+
+	/*
+	* Capture clause
+	* It is used to (indirectly) give a lambda access to a variable outside the lambda
+	* 
+	* Indirectly because the lambda will not access the variable outside
+	* By default the variable will be passed as const value, so the labda can not modify it
+	*/
+	std::cout << '\n';
+
+	// Use mutable keyword to 'remove' the const qualification.So the lambda can modify the capture
+	std::cout << "Capture mutable\n";
+	int ammo{ 10 };
+
+	auto shootMutable{
+		[ammo]() mutable {
+			--ammo; // now we can modify the capture variable
+			std::cout << "Pew! " << ammo << " shot(s) left\n";
+		}
+	};
+
+	/*
+	* Because capture variables are members of the lambda, their values are persisted across multiple calls
+	* The lambda modify its own capture variable but not the original variable value!
+	*/
+	shootMutable(); // prints 9
+	shootMutable(); // prints 8
+	std::cout << ammo << " shot(s) left\n"; // prints 10
+
+	// Using capture by reference allow us to modify the original value
+	std::cout << "\nCapture reference\n";
+	auto shootReference{
+		[&ammo]() {
+			--ammo;
+			std::cout << "Pew! " << ammo << " shot(s) left\n";
+		}
+	};
+
+	shootReference(); // prints 9
+	std::cout << ammo << " shot(s) left\n"; // prints 9
+
+	/*
+	* Default captures help us to define how the variables used in the lambda will be passed in
+	* so we don't need to list one by one in the capture clause
+	* 
+	* To capture all used variables by value, use a capture value of =
+	* To capture all used variables by reference, use a capture value of &
+	*/
+	std::array areas{ 100, 25, 121, 40, 56 };
+
+	// mock user input
+	int width{ 10 };
+	int height{ 10 };
+
+	auto areaFoundByValue{ std::find_if(areas.begin(), areas.end(),
+		[=](int knownArea) { // '=' used so the lambda will capture variables width and height by value
+			return (width * height == knownArea); // because they are used here
+		}) };
+
+	/*
+	* We also can declare a new variable that is only visible in the scope of the lambda
+	* Here we calculate the area before we can search for it in the array
+	*/
+	auto areaFound{ std::find_if(areas.begin(), areas.end(),
+		// userArea is a new variable declared only in the scope of the lambda
+		// the type is automatically deduced to int
+		[userArea{ width * height }](int knownArea) {
+			return (userArea == knownArea);
+		}) };
+
+
+	/*
+	* Dangling captured variables
+	* It happens when a variable is captured by reference dies before the lambda
+	* So the lembda will be left holding a dangling reference
+	*/
+	std::cout << "\nDangling captured variables\n";
+
+	// std::string dogName{ "Amarelinho" };
+
+	// sayDogName is the lambda returned by makeDog
+	auto sayDogName{ makeDog("Amarelinho") };
+	// because the name of the dog is a string literal, the call to makeDog creates a temporary std::string
+	// this string dies when makeDog returns but the lambda still references it
+	// then when we call sayDogName() the dangling reference is accessed, causing undefined behavior
+	sayDogName();
+
+
+	/*
+	* Copies of mutable lambdas
+	* Lambdas are objects so they can be copied and copies will have the same state as the originals
+	* After the copy is done, each lambda will have its variables
+	*/
+	std::cout << "\nCopies of mutable lambdas\n";
+	int i{ 0 };
+
+	auto count{ [i]() mutable { std::cout << ++i << '\n'; } };
+
+	// invoke the lambda count
+	count(); // prints 1
+
+	auto otherCount{ count }; // create a copy of lambda count
+
+	count(); // prints 2
+	otherCount(); // prints 2 because when otherCount was created the 'i' variable of count was 2
 
 	return 0;
 }
