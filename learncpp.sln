@@ -27,6 +27,8 @@ Global
 		calculate_ball_falling|x86 = calculate_ball_falling|x86
 		cin_cout|x64 = cin_cout|x64
 		cin_cout|x86 = cin_cout|x86
+		classes|x64 = classes|x64
+		classes|x86 = classes|x86
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
 		enum_class|x64 = enum_class|x64
@@ -131,6 +133,10 @@ Global
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.cin_cout|x64.Build.0 = cin_cout|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.cin_cout|x86.ActiveCfg = cin_cout|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.cin_cout|x86.Build.0 = cin_cout|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.classes|x64.ActiveCfg = classes|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.classes|x64.Build.0 = classes|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.classes|x86.ActiveCfg = classes|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.classes|x86.Build.0 = classes|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.Debug|x64.ActiveCfg = Debug|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.Debug|x64.Build.0 = Debug|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.Debug|x86.ActiveCfg = Debug|Win32

@@ -138,6 +138,9 @@
     <ClCompile Include="main_bin_search.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main_classes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add.h">
