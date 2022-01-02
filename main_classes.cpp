@@ -4,7 +4,27 @@
 
 class Point3D
 {
+private:
+	int m_x {};
+	int m_y {};
+	int m_z {};
+
 public:
+	// Default constructor
+	Point3D()
+	{
+		m_x = 1;
+		m_y = 1;
+		m_z = 1;
+	}
+	// Consctructor with parameters and one param having a default value
+	Point3D(int x, int y, int z = 1)
+	{
+		m_x = x;
+		m_y = y;
+		m_z = z;
+	}
+
 	void setValues(int x, int y, int z)
 	{
 		m_x = x;
@@ -22,12 +42,6 @@ public:
 	{
 		return (m_x == p.m_x) && (m_y == p.m_y) && (m_z == p.m_z);
 	}
-
-private:
-	int m_x {};
-	int m_y {};
-	int m_z {};
-
 };
 
 class Stack
@@ -81,6 +95,22 @@ private:
 	size_type m_idx { 0 };
 };
 
+class Something
+{
+private:
+	int m_value1; // Note no {} initialization
+	int m_value2;
+
+public:
+	// Create a default constructor that will zero initialize member variables
+	// even if they not been initialized at their declaration
+	Something() = default;
+
+	void print()
+	{
+		std::cout << "Class Something value1: " << m_value1 << " value2: " << m_value2 << '\n';
+	}
+};
 
 int main()
 {
@@ -93,6 +123,24 @@ int main()
 	point2.print();
 
 	std::cout << "point1 and point2 are equal: " <<  point1.isEqual(point2) << "\n";
+
+	Point3D point3; // Calls default constructor
+	point3.print();
+
+	Point3D point4 {}; // Also calls default constructor
+	point4.print();
+
+	Point3D point5 { 10, 5, 0 }; // Calls constructor with parameters
+	point5.print();
+
+	Point3D point6{ 10, 5 }; // Calls constructor with parameters and using one default (z)
+	point6.print();
+
+	Point3D point7(10, 5); // Also calls constructor with parameters
+	point7.print();
+
+	Something something{}; // Calls default constructor
+	something.print();
 
 	Stack stack;
 	stack.reset();
