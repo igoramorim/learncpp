@@ -1,6 +1,8 @@
 #include <iostream>
 #include <assert.h>
 #include <array>
+#include <string>
+#include <cstdint> // for fixed-width integers
 
 class Point3D
 {
@@ -112,6 +114,101 @@ public:
 	}
 };
 
+class Rectangle
+{
+private:
+	double m_length{ 1.0 }; // default values
+	double m_width{ 1.0 };
+
+public:
+	Rectangle(double length, double width) :
+		m_length{ length },
+		m_width{ width }
+	{
+		// m_length and m_width are initialized by the constructor (the default values aren't used)
+	}
+
+	Rectangle(double length) : m_length{ length }
+	{
+		// m_length is initialized by the constructor.
+		// m_width's default value (1.0) is used.
+	}
+
+	void print()
+	{
+		std::cout << "length: " << m_length << " width: " << m_width << '\n';
+	}
+};
+
+class Ball
+{
+private:
+	std::string m_color{ "black" };
+	double m_radius{ 10.0 };
+
+public:
+	
+	// Default constructor with no parameters
+	Ball() = default;
+
+	// Constructor with only radius parameter (color will use default value)
+	Ball(double radius) : m_radius{ radius }
+	{
+
+	}
+
+	// Constructor with only color parameter (radius will use default value)
+	Ball(const std::string& color) : m_color{ color }
+	{
+
+	}
+
+	// Constructor with both color and radius parameters
+	Ball(const std::string& color, double radius) : m_color{ color }, m_radius{ radius }
+	{
+
+	}
+
+	void print()
+	{
+		std::cout << "color: " << m_color << ", radius: " << m_radius << '\n';
+	}
+};
+
+class RGBA
+{
+public:
+	using comp_type = std::uint_fast8_t;
+
+private:
+	comp_type m_red{ 0 };
+	comp_type m_green{ 0 };
+	comp_type m_blue{ 0 };
+	comp_type m_alpha{ 255 };
+
+public:
+	RGBA(comp_type red, comp_type green, comp_type blue, comp_type alpha) :
+		m_red{ red }, m_green{ green }, m_blue{ blue }, m_alpha{ alpha }
+	{
+
+	}
+
+	RGBA(comp_type red, comp_type green, comp_type blue) :
+		m_red{ red }, m_green{ green }, m_blue{ blue }
+	{
+
+	}
+
+	void print()
+	{
+		std::cout <<   "R= " << static_cast<int>(m_red)
+			      << "\tG= " << static_cast<int>(m_green)
+			      << "\tB= " << static_cast<int>(m_blue)
+			      << "\tA= " << static_cast<int>(m_alpha)
+			      << '\n';
+	}
+};
+
 int main()
 {
 	Point3D point1;
@@ -141,6 +238,30 @@ int main()
 
 	Something something{}; // Calls default constructor
 	something.print();
+
+	Rectangle rec1{ 2.0, 3.0 }; // Non-static member initialization
+	rec1.print();
+
+	Rectangle rec2{ 4.0 }; // Non-static member initialization
+	rec2.print();
+
+	Ball defaultBall;
+	defaultBall.print();
+
+	Ball blueBall{ "blue" };
+	blueBall.print();
+
+	Ball twentyRadiusBall{ 20.0 };
+	twentyRadiusBall.print();
+
+	Ball blueTwentyBall{ "blue", 20.0 };
+	blueTwentyBall.print();
+
+	RGBA purple{ 142, 52, 245, 255 };
+	purple.print();
+
+	RGBA alsoPurple{ 142, 52, 245 };
+	alsoPurple.print();
 
 	Stack stack;
 	stack.reset();
