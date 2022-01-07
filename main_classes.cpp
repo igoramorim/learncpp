@@ -209,6 +209,50 @@ public:
 	}
 };
 
+class Foo
+{
+private:
+
+public:
+	// Constructor that does some default setup initialization
+	Foo()
+	{
+		std::cout << "Constructor Foo()\n";
+	}
+
+	// Constructor that calls the default constructor from the member initializer list to do the 'default setup'
+	// before doing another stuff
+	Foo(int value) : Foo{}
+	{
+		std::cout << "Constructor Foo(int value)\n";
+	}
+};
+
+class Bar
+{
+private:
+	int m_value1{ 1 };
+	int m_value2{ 2 };
+
+public:
+	Bar() = default;
+
+	Bar(int val1, int val2) : m_value1{ val1 }, m_value2{ val2 }
+	{
+
+	}
+
+	void print()
+	{
+		std::cout << "Class Bar value1: " << m_value1 << "\tvalue2: " << m_value2 << '\n';
+	}
+
+	void reset()
+	{
+		*this = Bar(); // create a new Bar object and then overwrite our implicit object (replace the object by a new instance of the same class)
+	}
+};
+
 int main()
 {
 	Point3D point1;
@@ -262,6 +306,13 @@ int main()
 
 	RGBA alsoPurple{ 142, 52, 245 };
 	alsoPurple.print();
+
+	Foo foo{ 1 }; // Delegating constructors
+
+	Bar bar1{ 50, 100 }; // Resetting a class to some default state
+	bar1.print();
+	bar1.reset();
+	bar1.print();
 
 	Stack stack;
 	stack.reset();
