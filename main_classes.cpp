@@ -108,10 +108,35 @@ public:
 	// even if they not been initialized at their declaration
 	Something() = default;
 
+	void setValue1(int value) { m_value1 = value; }
+	int getValue1() { return m_value1; }
+
 	void print()
 	{
 		std::cout << "Class Something value1: " << m_value1 << " value2: " << m_value2 << '\n';
 	}
+};
+
+class SomethingElse
+{
+private:
+	int m_value;
+	static inline int s_idGenerator{ 1 };
+	int m_id{ };
+
+public:
+	static int s_value; // non-const static member variable must be defined outside the class
+	static const int s_value2{ 2 }; // static const can be defined in the class
+	static constexpr int s_value3{ 3 }; // static constexpr can be defined in the class
+	static inline int s_value4{ 4 }; // we can use inline to define a static non-const member
+
+public:
+	SomethingElse() : m_value{ 0 }, m_id{ s_idGenerator++ } {}
+
+	void setValue(int value) { m_value = value; }
+	int getValue() const { return m_value; }
+	int getId() const { return m_id; }
+	static int getIdGenerator() { return s_idGenerator; }
 };
 
 class Rectangle
@@ -253,6 +278,12 @@ public:
 	}
 };
 
+/*
+* Because static member variables are not part of the individual class objects (like global variables)
+* We define it outside the class, in global scope
+*/
+int SomethingElse::s_value{ 1 };
+
 int main()
 {
 	Point3D point1;
@@ -352,6 +383,29 @@ int main()
 	stack.push(99);
 	stack.print();
 
+	const SomethingElse somethingConst; // Const class
+	// somethingConst.setValue(2); // Does not compile because the function modifies a member value
+	// somethingConst.getValue(); // Also does not compile even though the function does not modify the member value
+	
+	// This works because the function is marked const. It guarantees it will not modify the object or call any non-const member function
+	somethingConst.getValue();
+
+
+	SomethingElse somethingElse1;
+	SomethingElse somethingElse2;
+	// Because s_value is a static member value it is shared between all objects of the class
+	// It is not associated with class objects
+	somethingElse1.s_value = 2;
+
+	std::cout << somethingElse1.s_value << '\n';
+	std::cout << somethingElse2.s_value << '\n';
+	std::cout << SomethingElse::s_value << '\n'; // Static members can be accessed directly like this. We don't need an instance of the class
+
+	// An example of static member can be used to assign a unit ID to every instance of the class
+	std::cout << "SomethingElse id: " << somethingElse1.getId() << '\n';
+	std::cout << "SomethingElse id: " << somethingElse2.getId() << '\n';
+
+	std::cout << "SomethingElse id generator: " << SomethingElse::getIdGenerator() << '\n';
 
 	return 0;
 }
