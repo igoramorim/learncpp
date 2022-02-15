@@ -278,6 +278,25 @@ public:
 	}
 };
 
+class Value
+{
+private:
+	int m_value{};
+
+public:
+	Value(int value) : m_value{ value } {}
+
+	// A friend function can access private member variables directly
+	// Note that the function definition is outside the class
+	friend bool isEqual(const Value& v1, const Value& v2);
+};
+
+bool isEqual(const Value& v1, const Value& v2)
+{
+	// Here we are access a private member variable of Value directly because isEqual is a friend function of the Value class
+	return (v1.m_value == v2.m_value);
+}
+
 /*
 * Because static member variables are not part of the individual class objects (like global variables)
 * We define it outside the class, in global scope
@@ -406,6 +425,11 @@ int main()
 	std::cout << "SomethingElse id: " << somethingElse2.getId() << '\n';
 
 	std::cout << "SomethingElse id generator: " << SomethingElse::getIdGenerator() << '\n';
+
+	// Friend functions
+	Value v1{ 1 };
+	Value v2{ 1 };
+	std::cout << "Friend functions | isEqual: " << std::boolalpha << isEqual(v1, v2) << '\n';
 
 	return 0;
 }
