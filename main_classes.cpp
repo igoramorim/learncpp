@@ -291,6 +291,33 @@ public:
 	friend bool isEqual(const Value& v1, const Value& v2);
 };
 
+class HelloWorld
+{
+private:
+	char* m_data{};
+
+public:
+	HelloWorld()
+	{
+		m_data = new char[14];
+		const char* init{ "Hello, World!" };
+		for (int i = 0; i < 14; ++i)
+			m_data[i] = init[i];
+	}
+
+	~HelloWorld()
+	{
+		// replace this comment with your destructor implementation
+		delete[] m_data;
+	}
+
+	void print() const
+	{
+		std::cout << m_data << '\n';
+	}
+
+};
+
 bool isEqual(const Value& v1, const Value& v2)
 {
 	// Here we are access a private member variable of Value directly because isEqual is a friend function of the Value class
@@ -430,6 +457,9 @@ int main()
 	Value v1{ 1 };
 	Value v2{ 1 };
 	std::cout << "Friend functions | isEqual: " << std::boolalpha << isEqual(v1, v2) << '\n';
+
+	HelloWorld hello{};
+	hello.print();
 
 	return 0;
 }

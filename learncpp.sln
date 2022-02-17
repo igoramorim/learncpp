@@ -27,6 +27,8 @@ Global
 		calculate_ball_falling|x86 = calculate_ball_falling|x86
 		cin_cout|x64 = cin_cout|x64
 		cin_cout|x86 = cin_cout|x86
+		class_quiz|x64 = class_quiz|x64
+		class_quiz|x86 = class_quiz|x86
 		classes|x64 = classes|x64
 		classes|x86 = classes|x86
 		Debug|x64 = Debug|x64
@@ -47,6 +49,8 @@ Global
 		iterators|x86 = iterators|x86
 		lambda|x64 = lambda|x64
 		lambda|x86 = lambda|x86
+		main_timer|x64 = main_timer|x64
+		main_timer|x86 = main_timer|x86
 		max_students_class|x64 = max_students_class|x64
 		max_students_class|x86 = max_students_class|x86
 		member_selection|x64 = member_selection|x64
@@ -135,6 +139,10 @@ Global
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.cin_cout|x64.Build.0 = cin_cout|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.cin_cout|x86.ActiveCfg = cin_cout|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.cin_cout|x86.Build.0 = cin_cout|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.class_quiz|x64.ActiveCfg = class_quiz|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.class_quiz|x64.Build.0 = class_quiz|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.class_quiz|x86.ActiveCfg = class_quiz|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.class_quiz|x86.Build.0 = class_quiz|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.classes|x64.ActiveCfg = classes|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.classes|x64.Build.0 = classes|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.classes|x86.ActiveCfg = classes|Win32
@@ -175,6 +183,10 @@ Global
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.lambda|x64.Build.0 = lambda|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.lambda|x86.ActiveCfg = lambda|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.lambda|x86.Build.0 = lambda|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.main_timer|x64.ActiveCfg = main_timer|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.main_timer|x64.Build.0 = main_timer|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.main_timer|x86.ActiveCfg = main_timer|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.main_timer|x86.Build.0 = main_timer|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.max_students_class|x64.ActiveCfg = max_students_class|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.max_students_class|x64.Build.0 = max_students_class|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.max_students_class|x86.ActiveCfg = max_students_class|Win32
