@@ -57,6 +57,8 @@ Global
 		member_selection|x86 = member_selection|x86
 		memory_allocation|x64 = memory_allocation|x64
 		memory_allocation|x86 = memory_allocation|x86
+		monster_generator|x64 = monster_generator|x64
+		monster_generator|x86 = monster_generator|x86
 		mult_array|x64 = mult_array|x64
 		mult_array|x86 = mult_array|x86
 		pointer_address|x64 = pointer_address|x64
@@ -199,6 +201,10 @@ Global
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.memory_allocation|x64.Build.0 = memory_allocation|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.memory_allocation|x86.ActiveCfg = memory_allocation|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.memory_allocation|x86.Build.0 = memory_allocation|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.monster_generator|x64.ActiveCfg = monster_generator|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.monster_generator|x64.Build.0 = monster_generator|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.monster_generator|x86.ActiveCfg = monster_generator|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.monster_generator|x86.Build.0 = monster_generator|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.mult_array|x64.ActiveCfg = mult_array|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.mult_array|x64.Build.0 = mult_array|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.mult_array|x86.ActiveCfg = mult_array|Win32
