@@ -65,6 +65,10 @@ Global
 		mult_array|x86 = mult_array|x86
 		overload_operators_friend|x64 = overload_operators_friend|x64
 		overload_operators_friend|x86 = overload_operators_friend|x86
+		overload_operators_io|x64 = overload_operators_io|x64
+		overload_operators_io|x86 = overload_operators_io|x86
+		overload_operators|x64 = overload_operators|x64
+		overload_operators|x86 = overload_operators|x86
 		pointer_address|x64 = pointer_address|x64
 		pointer_address|x86 = pointer_address|x86
 		pointer_array|x64 = pointer_array|x64
@@ -221,6 +225,14 @@ Global
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators_friend|x64.Build.0 = overload_operators_friend|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators_friend|x86.ActiveCfg = overload_operators_friend|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators_friend|x86.Build.0 = overload_operators_friend|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators_io|x64.ActiveCfg = overload_operators_io|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators_io|x64.Build.0 = overload_operators_io|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators_io|x86.ActiveCfg = overload_operators_io|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators_io|x86.Build.0 = overload_operators_io|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators|x64.ActiveCfg = overload_operators|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators|x64.Build.0 = overload_operators|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators|x86.ActiveCfg = overload_operators|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators|x86.Build.0 = overload_operators|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.pointer_address|x64.ActiveCfg = pointer_address|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.pointer_address|x64.Build.0 = pointer_address|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.pointer_address|x86.ActiveCfg = pointer_address|Win32

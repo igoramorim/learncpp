@@ -189,6 +189,15 @@
     <ClCompile Include="main_overload_operators_friend.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="cents.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main_overload_operators.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main_overload_operators_io.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add.h">
@@ -228,6 +237,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="blackjack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cents.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
