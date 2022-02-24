@@ -63,6 +63,8 @@ Global
 		monster_generator|x86 = monster_generator|x86
 		mult_array|x64 = mult_array|x64
 		mult_array|x86 = mult_array|x86
+		overload_operators_comparison|x64 = overload_operators_comparison|x64
+		overload_operators_comparison|x86 = overload_operators_comparison|x86
 		overload_operators_friend|x64 = overload_operators_friend|x64
 		overload_operators_friend|x86 = overload_operators_friend|x86
 		overload_operators_io|x64 = overload_operators_io|x64
@@ -223,6 +225,10 @@ Global
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.mult_array|x64.Build.0 = mult_array|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.mult_array|x86.ActiveCfg = mult_array|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.mult_array|x86.Build.0 = mult_array|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators_comparison|x64.ActiveCfg = overload_operators_comparison|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators_comparison|x64.Build.0 = overload_operators_comparison|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators_comparison|x86.ActiveCfg = overload_operators_comparison|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators_comparison|x86.Build.0 = overload_operators_comparison|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators_friend|x64.ActiveCfg = overload_operators_friend|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators_friend|x64.Build.0 = overload_operators_friend|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators_friend|x86.ActiveCfg = overload_operators_friend|Win32

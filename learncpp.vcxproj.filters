@@ -201,6 +201,9 @@
     <ClCompile Include="main_overload_operators_unary.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main_overload_operators_comparison.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add.h">
