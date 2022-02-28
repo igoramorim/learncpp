@@ -237,6 +237,22 @@
       <Configuration>overload_operators_friend</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="overload_operators_increment|Win32">
+      <Configuration>overload_operators_increment</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="overload_operators_increment|x64">
+      <Configuration>overload_operators_increment</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="overload_operators_increm|Win32">
+      <Configuration>overload_operators_increm</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="overload_operators_increm|x64">
+      <Configuration>overload_operators_increm</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="overload_operators_io|Win32">
       <Configuration>overload_operators_io</Configuration>
       <Platform>Win32</Platform>
@@ -427,6 +443,12 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
@@ -745,6 +767,12 @@
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
@@ -1052,12 +1080,21 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|Win32'">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="Shared">
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|Win32'" Label="PropertySheets">
@@ -1214,6 +1251,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'" Label="PropertySheets">
@@ -1373,6 +1413,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|Win32'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
@@ -1529,6 +1572,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
@@ -1683,6 +1729,18 @@
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
@@ -2311,6 +2369,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
@@ -3009,6 +3080,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_blackjack.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='functions|x64'">true</ExcludedFromBuild>
@@ -3028,6 +3101,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_blackjack_oop.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_friend|x64'">true</ExcludedFromBuild>
@@ -3035,6 +3110,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_classes.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='friend_functions|x64'">true</ExcludedFromBuild>
@@ -3047,6 +3124,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_class_quiz.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='classes|x64'">true</ExcludedFromBuild>
@@ -3057,6 +3136,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_for_each.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='std_array|x64'">true</ExcludedFromBuild>
@@ -3084,6 +3165,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_friend_functions.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='main_timer|x64'">true</ExcludedFromBuild>
@@ -3096,6 +3179,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_functions.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='function_pointers|x64'">true</ExcludedFromBuild>
@@ -3114,6 +3199,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_function_pointers.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='std_vector|x64'">true</ExcludedFromBuild>
@@ -3131,6 +3218,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_iterators.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='std_vector|x64'">true</ExcludedFromBuild>
@@ -3157,6 +3246,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_lambda.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='bin_search|x64'">true</ExcludedFromBuild>
@@ -3171,6 +3262,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_member_selection.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='for_each|x64'">true</ExcludedFromBuild>
@@ -3199,6 +3292,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_monster_generator.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='blackjack_oop|x64'">true</ExcludedFromBuild>
@@ -3207,25 +3302,39 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_overload_operators.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="main_overload_operators_comparison.cpp" />
+    <ClCompile Include="main_overload_operators_comparison.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="main_overload_operators_friend.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="main_overload_operators_increment.cpp" />
     <ClCompile Include="main_overload_operators_io.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_overload_operators_unary.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_pointer_array.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='pointer|x64'">true</ExcludedFromBuild>
@@ -3275,6 +3384,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_pointer.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='memory_allocation|x64'">true</ExcludedFromBuild>
@@ -3324,6 +3435,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_memory_allocation.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='array_allocation|x64'">true</ExcludedFromBuild>
@@ -3373,6 +3486,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_array_allocation.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='reference_variable|x64'">true</ExcludedFromBuild>
@@ -3422,6 +3537,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_quiz_enum_array.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='quiz_vector_struct|x64'">true</ExcludedFromBuild>
@@ -3445,6 +3562,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_recursion.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='lambda|x64'">true</ExcludedFromBuild>
@@ -3460,6 +3579,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_reference_variable.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='bit_manipulation|x64'">true</ExcludedFromBuild>
@@ -3509,6 +3630,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_array.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='array_2|x64'">true</ExcludedFromBuild>
@@ -3558,6 +3681,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_array_2.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='array|x64'">true</ExcludedFromBuild>
@@ -3607,6 +3732,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_sort_array.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='sort_array_2|x64'">true</ExcludedFromBuild>
@@ -3656,6 +3783,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_sort_array_2.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='mult_array|x64'">true</ExcludedFromBuild>
@@ -3705,6 +3834,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_mult_array.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='pointer_address|x64'">true</ExcludedFromBuild>
@@ -3754,6 +3885,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_pointer_address.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='pointer_array|x64'">true</ExcludedFromBuild>
@@ -3803,6 +3936,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_static_local_variable.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='switch|x64'">true</ExcludedFromBuild>
@@ -3852,6 +3987,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_std_algorithm.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='quiz_enum_array|x64'">true</ExcludedFromBuild>
@@ -3876,6 +4013,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_std_array.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='std_array|x64'">false</ExcludedFromBuild>
@@ -3903,6 +4042,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_std_vector.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='std_vector|x64'">false</ExcludedFromBuild>
@@ -3930,6 +4071,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_switch.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ascii_char|x64'">true</ExcludedFromBuild>
@@ -3979,6 +4122,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_timer.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='classes|x64'">true</ExcludedFromBuild>
@@ -3990,6 +4135,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_while.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='calculate_ball_falling_while|x64'">true</ExcludedFromBuild>
@@ -4039,6 +4186,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_ascii_char.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='while|x64'">true</ExcludedFromBuild>
@@ -4088,6 +4237,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_calculate_ball_falling_while.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='template|x64'">true</ExcludedFromBuild>
@@ -4137,6 +4288,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_template.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='struct|x64'">true</ExcludedFromBuild>
@@ -4186,6 +4339,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_struct.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='enum_class|x64'">true</ExcludedFromBuild>
@@ -4235,6 +4390,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_enum_class.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='array|x64'">true</ExcludedFromBuild>
@@ -4284,6 +4441,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_bit_manipulation.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='simple_operators|x64'">true</ExcludedFromBuild>
@@ -4333,6 +4492,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="input.cpp" />
     <ClCompile Include="main_calculate_ball_falling.cpp">
@@ -4383,6 +4544,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_cin_cout.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='header_files|x64'">true</ExcludedFromBuild>
@@ -4434,6 +4597,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_header_files.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cin_cout|x64'">true</ExcludedFromBuild>
@@ -4485,6 +4650,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_max_students_class.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='static_local_variable|x64'">true</ExcludedFromBuild>
@@ -4534,6 +4701,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_simple_operators.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='calculate_ball_falling|x64'">true</ExcludedFromBuild>
@@ -4583,6 +4752,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main_quiz_vector_struct.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='array_allocation|x64'">true</ExcludedFromBuild>
@@ -4605,6 +4776,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_io|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_unary|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_comparison|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increment|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='overload_operators_increm|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="monster.cpp" />
     <ClCompile Include="monster_generator.cpp" />
