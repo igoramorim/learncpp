@@ -71,6 +71,8 @@ Global
 		overload_operators_increm|x86 = overload_operators_increm|x86
 		overload_operators_io|x64 = overload_operators_io|x64
 		overload_operators_io|x86 = overload_operators_io|x86
+		overload_operators_subscript|x64 = overload_operators_subscript|x64
+		overload_operators_subscript|x86 = overload_operators_subscript|x86
 		overload_operators_unary|x64 = overload_operators_unary|x64
 		overload_operators_unary|x86 = overload_operators_unary|x86
 		overload_operators|x64 = overload_operators|x64
@@ -243,6 +245,10 @@ Global
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators_io|x64.Build.0 = overload_operators_io|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators_io|x86.ActiveCfg = overload_operators_io|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators_io|x86.Build.0 = overload_operators_io|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators_subscript|x64.ActiveCfg = overload_operators_subscript|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators_subscript|x64.Build.0 = overload_operators_subscript|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators_subscript|x86.ActiveCfg = overload_operators_subscript|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators_subscript|x86.Build.0 = overload_operators_subscript|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators_unary|x64.ActiveCfg = overload_operators_unary|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators_unary|x64.Build.0 = overload_operators_unary|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.overload_operators_unary|x86.ActiveCfg = overload_operators_unary|Win32
