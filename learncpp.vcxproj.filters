@@ -210,6 +210,9 @@
     <ClCompile Include="main_overload_operators_subscript.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main_overload_operators_typecast.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add.h">
