@@ -33,6 +33,8 @@ Global
 		class_quiz|x86 = class_quiz|x86
 		classes|x64 = classes|x64
 		classes|x86 = classes|x86
+		copy_constructor|x64 = copy_constructor|x64
+		copy_constructor|x86 = copy_constructor|x86
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
 		enum_class|x64 = enum_class|x64
@@ -171,6 +173,10 @@ Global
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.classes|x64.Build.0 = classes|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.classes|x86.ActiveCfg = classes|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.classes|x86.Build.0 = classes|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.copy_constructor|x64.ActiveCfg = copy_constructor|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.copy_constructor|x64.Build.0 = copy_constructor|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.copy_constructor|x86.ActiveCfg = copy_constructor|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.copy_constructor|x86.Build.0 = copy_constructor|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.Debug|x64.ActiveCfg = Debug|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.Debug|x64.Build.0 = Debug|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.Debug|x86.ActiveCfg = Debug|Win32
