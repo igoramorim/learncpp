@@ -39,6 +39,8 @@ Global
 		Debug|x86 = Debug|x86
 		enum_class|x64 = enum_class|x64
 		enum_class|x86 = enum_class|x86
+		explicit_delete|x64 = explicit_delete|x64
+		explicit_delete|x86 = explicit_delete|x86
 		for_each|x64 = for_each|x64
 		for_each|x86 = for_each|x86
 		friend_functions|x64 = friend_functions|x64
@@ -185,6 +187,10 @@ Global
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.enum_class|x64.Build.0 = enum_class|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.enum_class|x86.ActiveCfg = enum_class|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.enum_class|x86.Build.0 = enum_class|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.explicit_delete|x64.ActiveCfg = explicit_delete|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.explicit_delete|x64.Build.0 = explicit_delete|x64
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.explicit_delete|x86.ActiveCfg = explicit_delete|Win32
+		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.explicit_delete|x86.Build.0 = explicit_delete|Win32
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.for_each|x64.ActiveCfg = for_each|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.for_each|x64.Build.0 = for_each|x64
 		{27E70EE0-BAA1-45AF-8F78-DB8CE04D5CB5}.for_each|x86.ActiveCfg = for_each|Win32
