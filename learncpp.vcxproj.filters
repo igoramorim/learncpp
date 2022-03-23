@@ -219,6 +219,12 @@
     <ClCompile Include="main_explicit_delete.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main_overload_operators_assignment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main_overload_operators_function_templates.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add.h">
